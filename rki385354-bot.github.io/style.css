@@ -1,0 +1,248 @@
+/* 清除浏览器默认样式，确保不同浏览器显示一致 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #08042a;
+    color: #f3fefe;
+    font-family: "MS Gothic", "Fixedsys", monospace;
+    font-size: 13px;
+    padding: 20px;
+    line-height: 1.5;
+    min-width: 900px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 顶部布局：Banner在左，标题在右 */
+.header-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.banner-box {
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border: 1px solid #F0FFFF;
+    display: block;
+}
+
+.site-title {
+    font-size: 34px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px #00000066;
+}
+
+.sep {
+    width: 80%;
+    border: none;
+    border-top: 2px solid #F0FFFF;
+}
+
+/* 主体双栏布局 */
+.main-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.left-side {
+    width: 320px;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 60vh;
+}
+
+/* 像素框样式 */
+.pixel-box {
+    border: 1px solid #F0FFFF;
+    background: rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+.box-title {
+    background: #1f2362;
+    color: #000080;
+    padding: 2px 8px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.roles-box .box-title {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 导航与链接 */
+.nav-links {
+    list-style: none;
+}
+.nav-links li {
+    margin-bottom: 10px;
+}
+a {
+    color: #F0FFFF;
+    text-decoration: none;
+    border-bottom: 1px dashed #F0FFFF;
+}
+a:hover {
+    background: #F0FFFF;
+    color: #000080;
+}
+
+/* 注意事项：薰衣草紫 */
+.notice-text {
+    color: #E6E6FA;
+    font-size: 12px;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+/* 图片占位 */
+.img-placeholder {
+    width: 100%;
+    height: 180px;
+    border: 1px dashed #F0FFFF;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* 角色列表：竖向头像 + 名称 */
+.role-list {
+    list-style: none;
+}
+.role-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #F0FFFF;
+}
+.role-name {
+    color: #F0FFFF;
+    font-weight: bold;
+}
+
+/* 文章/大图块 */
+.article-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1; /* 保证两个块等高 */
+}
+.article-image {
+    flex: 1;
+    min-height: 220px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #F0FFFF;
+}
+.article-caption {
+    background: rgba(0,0,0,0.45);
+    padding: 10px;
+    border-top: 1px dashed #F0FFFF;
+}
+.article-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.article-desc {
+    font-size: 13px;
+}
+
+/* 页脚版权 */
+.pixel-footer {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #F0FFFF;
+    padding: 20px;
+    font-size: 11px;
+}
+.copyright-legal {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.small-note {
+    color: #F0FFFF;
+    font-size: 12px;
+}
+
+/* 响应式设计：适配手机屏幕 */
+@media (max-width: 768px) {
+    .header-area {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .banner-box {
+        width: 100%;
+    }
+
+    .banner-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .article-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .article-image {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+}
